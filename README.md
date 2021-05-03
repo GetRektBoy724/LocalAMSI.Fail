@@ -7,4 +7,5 @@ you can also use the pre-compiled binary which is in a form of library/DLL.For t
 - This code is not flagged as malicious (idk why) nor the pre-compiled binary,so you can execute it anywhere you want.
 - the Pre-Compiled binary is not injected with anything malicious nor slipped with malicious code,so dont even think of me get a meterpreter shell from the computer you load the dll 😂
 - I call this "LocalAMSI.Fail" cause we dont need to access the AMSI.fail API to get the AMSI bypass,instead of that,we load the AMSI.fail code locally and generate the AMSI bypass locally
-- Cause i modify the AMSI Bypass a little,i create my own "Online" AMSI.Fail and you can access it by invoking the "OnlineAMSIFail.ps1" script
+- Cause i modify the AMSI Bypass a little,i create my own "Online" AMSI.Fail and you can access it by invoking the "OnlineAMSIFail.ps1" script or accessing [my free website](http://getrektboy.000webhostapp.com/OnlineAMSIFail.php)
+- You can deploy OnlineAMSIFail in your own server with the "OnlineAMSIFail.php"
