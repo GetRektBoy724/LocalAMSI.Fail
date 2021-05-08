@@ -24,12 +24,12 @@ $status = curl_getinfo($ch, CURLINFO_HTTP_CODE);
 if ( $status != 200 ) {
     die("#Error: shit we're fucked up, API response : $result, error : " . curl_error($ch) . ", curl error number :  " . curl_errno($ch));
     // Close cURL resource
-	curl_close($ch);
+    curl_close($ch);
 }else {
-	// Parse output
-	$parsedresponse = json_decode($result, true);
-	echo $parsedresponse['ConsoleOutput'];
-	// Close cURL resource
-	curl_close($ch);
+    // Parse output
+    $parsedresponse = json_decode($result, true);
+    echo $parsedresponse['ConsoleOutput'];
+    // Close cURL resource
+    curl_close($ch);
 }
 ?>
